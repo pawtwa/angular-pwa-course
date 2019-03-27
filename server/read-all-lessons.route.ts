@@ -1,10 +1,14 @@
 
 import {db} from "./database";
-import { HttpResponse } from "@angular/common/http";
 import { Response } from "express";
 
 export function readAllLessons(req, res) {
-    (<Response>res).setTimeout(8000, () => {
+    let delay = 500;
+    if (delay > 0) {
+        (<Response>res).setTimeout(delay, () => {
+            (<Response>res).status(200).json({lessons:db.readAllLessons()});
+        });
+    } else {
         (<Response>res).status(200).json({lessons:db.readAllLessons()});
-    });
+    }
 }
