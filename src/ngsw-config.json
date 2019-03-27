@@ -28,7 +28,8 @@
         "/api/lessons"
       ],
       "cacheConfig": {
-        "strategy": "performance",
+        "strategy": "freshness",
+        "timeout": "3s",
         "maxAge": "3h",
         "maxSize": 100
       }
