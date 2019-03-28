@@ -1,7 +1,8 @@
 
 
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpEvent} from "@angular/common/http";
+import { Observable } from "rxjs";
 
 
 
@@ -12,8 +13,8 @@ export class NewsletterService {
 
     }
 
-    addPushSubscriber(sub:any) {
-
+    addPushSubscriber(sub: any): Observable<any> {
+        return this.http.post('/api/notifications', sub);
     }
 
     send() {
