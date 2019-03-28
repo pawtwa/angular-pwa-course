@@ -11,23 +11,15 @@ import * as http from "http";
 const webpush = require('web-push');
 
 const vapidKeys = {
-    // publicKey:"BC8ZTEWmcfD5_5LycfXCJ5Ruj0XQVads2NsisgvOPM6Rt301gehMkIQAUjll8yke_NrnczKvYgODaufgWROs5qM",
-    // privateKey:"1323soEL93ulNdRLe_im3npulRvfkTZko8HZeI0Zxms"
-    publicKey: "",
-    privateKey: ""
+    publicKey:"BC8ZTEWmcfD5_5LycfXCJ5Ruj0XQVads2NsisgvOPM6Rt301gehMkIQAUjll8yke_NrnczKvYgODaufgWROs5qM",
+    privateKey:"1323soEL93ulNdRLe_im3npulRvfkTZko8HZeI0Zxms"
 };
-
-/*
-
-    TODO - uncomment after generating your VAPID keys
 
 webpush.setVapidDetails(
     'mailto:example@yourdomain.org',
     vapidKeys.publicKey,
     vapidKeys.privateKey
 );
-
-*/
 
 
 const app: Application = express();
