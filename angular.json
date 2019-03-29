@@ -20,7 +20,8 @@
               "src/assets",
               "src/favicon.ico",
               "src/sw-register.js",
-              "src/sw.js"
+              "src/sw.js",
+              "src/offline.html"
             ],
             "styles": [
               "src/styles.css"
